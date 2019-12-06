@@ -1,0 +1,3 @@
+[submodule "adventourous"]
+	path = adventourous
+	url = https://github.com/tahi1990/adventourous.git
