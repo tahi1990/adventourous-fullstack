@@ -1,0 +1,27 @@
+version: "3.4"
+
+services:
+  adventourous-client:
+    container_name: "adventourous-client"
+    image: tahi1990/adventourous-client
+    ports:
+      - "3000:3000"
+    environment:
+      - SERVER_URI=http://adventourous-server
+    networks:
+      - adventourous
+
+  adventourous-server:
+    container_name: "adventourous-server"
+    image: tahi1990/adventourous-server
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/adventourous
+    networks:
+      - adventourous
+
+networks:
+  adventourous:
+    external: true
+

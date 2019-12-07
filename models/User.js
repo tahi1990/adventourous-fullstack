@@ -13,6 +13,7 @@ const userSchema = new Schema({
         name: String,
         lat: String,
         lng: String,
+        address: String,
         image: String
     }]
 });

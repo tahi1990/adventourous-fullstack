@@ -30,7 +30,7 @@ module.exports = (app) => {
         })
     });
 
-    app.put(`/api/product/:id`, cors(), async (req, res) => {
+    app.put(`/api/user/:id`, cors(), async (req, res) => {
         const {id} = req.params;
 
         let user = await User.findOneAndUpdate({id: id}, req.body);
