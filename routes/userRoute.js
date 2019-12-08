@@ -37,7 +37,7 @@ module.exports = (app) => {
 
         return res.status(202).send({
             error: false,
-            user
+            user: req.body
         });
 
     });
