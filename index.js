@@ -16,6 +16,7 @@ app.use(cors());
 
 //IMPORT ROUTES
 require('./routes/userRoute')(app);
+require('./routes/placeRoute')(app);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('adventourous/build'));
